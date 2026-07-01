@@ -1,0 +1,430 @@
+.root {
+    -fx-font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei", sans-serif;
+    -fx-color: #e0e0e0;
+}
+.text-preview, .timestamp, .title-text {
+    -fx-cursor: default;
+}
+.main-panel {
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 20, 0, 4, 8);
+    -fx-padding: 24;
+}
+.inner-panel {
+    -fx-background-color: #252525;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+.top-bar {
+    -fx-background-color: #2d2d2d;
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 10 12;
+    -fx-cursor: move;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #1a1a1a;
+}
+.title-text {
+    -fx-font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #e0e0e0;
+}
+.close-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-size: 15px;
+    -fx-text-fill: #888;
+    -fx-padding: 2 6;
+    -fx-background-radius: 4;
+}
+.close-button:hover {
+    -fx-text-fill: #ff6b6b;
+    -fx-background-color: rgba(255,107,107,0.1);
+}
+.search-area {
+    -fx-background-color: #252525;
+    -fx-padding: 8 12;
+}
+.search-field {
+    -fx-background-color: #3c3c3c;
+    -fx-background-radius: 4;
+    -fx-prompt-text-fill: #666;
+    -fx-text-fill: #e0e0e0;
+    -fx-padding: 7 12;
+    -fx-border-color: #1a1a1a;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-font-size: 12px;
+}
+.search-field:focused {
+    -fx-border-color: #4a9eff;
+    -fx-background-color: #3c3c3c;
+}
+.scroll-pane {
+    -fx-background: #252525;
+    -fx-background-color: #252525;
+    -fx-padding: 0;
+    -fx-background-radius: 0 0 8 8;
+    -fx-border-radius: 0 0 8 8;
+}
+.scroll-pane .viewport {
+    -fx-background-color: #252525;
+    -fx-background-radius: 0 0 8 8;
+    -fx-border-radius: 0 0 8 8;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.scroll-pane:focused,
+.scroll-pane:pressed {
+    -fx-background-color: #252525;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+}
+.scroll-pane .viewport:focused,
+.scroll-pane .viewport:pressed {
+    -fx-background-color: #252525;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+.content-box {
+    -fx-background-color: #252525;
+    -fx-background-radius: 0 0 8 8;
+    -fx-border-radius: 0 0 8 8;
+    -fx-padding: 0 0 2 0;
+    -fx-min-width: 0;
+    -fx-pref-width: -1;
+    -fx-max-width: Infinity;
+}
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-width: 0;
+    -fx-opacity: 0;
+}
+.scroll-bar .thumb {
+    -fx-opacity: 0;
+}
+.scroll-bar .track {
+    -fx-opacity: 0;
+}
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-opacity: 0;
+}
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-opacity: 0;
+}
+.card {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 10 12;
+    -fx-spacing: 6;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #1a1a1a;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+    -fx-min-width: 0;
+    -fx-pref-width: -1;
+}
+.card:hover {
+    -fx-background-color: #2d2d2d;
+}
+.card:pressed {
+    -fx-background-color: #2d2d2d;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+.card:pinned {
+    -fx-background-color: #2a2720;
+    -fx-border-color: #f0ad4e;
+    -fx-border-width: 0 0 1 3;
+}
+.card:pinned:hover {
+    -fx-background-color: #333028;
+}
+.card:pinned:pressed {
+    -fx-background-color: #333028;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+.text-preview {
+    -fx-font-size: 13px;
+    -fx-text-fill: #e0e0e0;
+    -fx-line-spacing: 1.3;
+}
+.timestamp {
+    -fx-font-size: 11px;
+    -fx-text-fill: #777;
+}
+.pinned-badge {
+    -fx-font-size: 11px;
+    -fx-text-fill: #f0ad4e;
+    -fx-font-weight: bold;
+}
+.card-image {
+    -fx-background-radius: 4;
+}
+.missing-label {
+    -fx-text-fill: #666;
+    -fx-font-size: 12px;
+    -fx-padding: 8 0;
+}
+.content-box {
+    -fx-spacing: 0;
+    -fx-padding: 0;
+}
+.empty-text {
+    -fx-font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei";
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+}
+.separator-line {
+    -fx-fill: #1a1a1a;
+}
+.context-menu {
+    -fx-background-color: #2d2d2d;
+    -fx-background-radius: 4;
+    -fx-border-color: #1a1a1a;
+    -fx-border-radius: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2);
+    -fx-padding: 2 0;
+    -fx-border-width: 1;
+}
+.context-menu .menu-item {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #d4d4d4;
+    -fx-font-size: 12px;
+    -fx-padding: 6 24 6 24;
+    -fx-border-width: 0;
+}
+.context-menu .menu-item:hover {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #ffffff;
+}
+.context-menu .menu-item:focused {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #ffffff;
+}
+.context-menu .menu-item .label {
+    -fx-text-fill: inherit;
+    -fx-font-size: inherit;
+}
+.context-menu .menu-item:hover .label {
+    -fx-text-fill: #ffffff;
+}
+.context-menu .menu-item:focused .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Light theme context menu */
+.light-context-menu {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0.3, 2, 2);
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+.light-context-menu .menu-item {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-font-family: sans-serif;
+    -fx-font-size: 12px;
+    -fx-padding: 5 20 5 20;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+}
+.light-context-menu .menu-item:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #000000;
+    -fx-background-insets: 0;
+}
+.light-context-menu .menu-item:focused {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #000000;
+    -fx-background-insets: 0;
+}
+.light-context-menu .menu-item .label {
+    -fx-text-fill: inherit;
+    -fx-font-size: inherit;
+    -fx-padding: 0;
+}
+.light-context-menu .menu-item:hover .label {
+    -fx-text-fill: #000000;
+}
+.light-context-menu .menu-item:focused .label {
+    -fx-text-fill: #000000;
+}
+/* ===== Settings Window ===== */
+.settings-root {
+    -fx-background-color: transparent;
+    -fx-padding: 24;
+}
+.settings-container {
+    -fx-background-color: #1e1e1e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 20, 0, 0, 0);
+}
+
+/* Header bar — close button + drag region */
+.settings-header-bar {
+    -fx-background-color: #252525;
+    -fx-min-height: 36;
+    -fx-padding: 0 12;
+    -fx-alignment: center-right;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #333333;
+}
+.settings-close-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-text-fill: #888;
+    -fx-padding: 2 10;
+}
+.settings-close-btn:hover {
+    -fx-text-fill: #ff6b6b;
+    -fx-background-color: rgba(255,107,107,0.1);
+}
+
+/* Card list container */
+.settings-card-list {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 12 16;
+    -fx-spacing: 10;
+}
+
+/* Card */
+.settings-card {
+    -fx-background-color: #252525;
+    -fx-padding: 14 16;
+    -fx-spacing: 10;
+    -fx-border-width: 1;
+    -fx-border-color: #2d2d2d;
+}
+.settings-card-title {
+    -fx-font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei";
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #e0e0e0;
+}
+.settings-card-desc {
+    -fx-font-family: "Segoe UI Variable", "Segoe UI", "Microsoft YaHei";
+    -fx-font-size: 11px;
+    -fx-text-fill: #808080;
+}
+
+/* Settings ScrollPane — override ALL states to prevent any insets change */
+.settings-scroll-pane {
+    -fx-background: #1e1e1e;
+    -fx-background-color: #1e1e1e;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-effect: null;
+}
+.settings-scroll-pane:focused,
+.settings-scroll-pane:pressed {
+    -fx-background-color: #1e1e1e;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+}
+.settings-scroll-pane .viewport,
+.settings-scroll-pane .viewport:focused {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+/* Input field */
+.settings-text-field {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #404040;
+    -fx-padding: 8 12;
+    -fx-border-width: 1;
+    -fx-font-size: 13px;
+}
+.settings-text-field:focused {
+    -fx-border-color: #4a9eff;
+    -fx-background-color: #333333;
+}
+
+/* Buttons — uniform gray bg, dark text */
+.settings-button {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #e0e0e0;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-font-size: 13px;
+}
+.settings-button:hover {
+    -fx-background-color: #4a4a4a;
+}
+.settings-button-secondary {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #e0e0e0;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-font-size: 13px;
+}
+.settings-button-secondary:hover {
+    -fx-background-color: #4a4a4a;
+}
+
+/* ToggleButton (theme picker) */
+.settings-theme-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ccc;
+    -fx-border-color: #555;
+    -fx-border-width: 1;
+    -fx-padding: 7 20;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+.settings-theme-button:selected {
+    -fx-background-color: #4a9eff;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #4a9eff;
+}
+.settings-theme-button:hover {
+    -fx-background-color: #3a3a3a;
+}
+.settings-theme-button:selected:hover {
+    -fx-background-color: #3a8eef;
+}
+
+/* CheckBox */
+.settings-checkbox {
+    -fx-font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    -fx-text-fill: #d0d0d0;
+    -fx-font-size: 13px;
+}
+
+/* Spinner */
+.settings-spinner {
+    -fx-background-color: #2d2d2d;
+    -fx-border-color: #404040;
+    -fx-border-width: 1;
+}
+.settings-spinner .text-field {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 13px;
+    -fx-padding: 4 8;
+}
+.settings-spinner .increment-arrow-button,
+.settings-spinner .decrement-arrow-button {
+    -fx-background-color: #3a3a3a;
+    -fx-cursor: hand;
+}
+.settings-spinner .increment-arrow-button:hover,
+.settings-spinner .decrement-arrow-button:hover {
+    -fx-background-color: #4a4a4a;
+}
+
